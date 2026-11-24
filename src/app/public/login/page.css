@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+.login-background {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-color: #F5F8F6;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+
+    width: 100%;
+    max-width: 400px;
+    min-height: 530px;
+
+    border: 1px solid #B9C9C1;
+    border-radius: 15px;
+
+    background-color: white;
+
+    box-sizing: border-box;
+}
+
+.login-contents {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 0px 20px 0px 20px;
+
+    box-sizing: border-box;
+}
+
+.login-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.login-subtitle {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 500;
+
+    color: grey;
+
+    margin-top: 0px;
+}
+
+.login-with-google-button,
+.login-with-email-email-input,
+.login-with-email-password-input,
+.login-with-email-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+
+    width: 100%;
+
+    border: 2px solid #B9C9C1;
+    border-radius: 8px;
+
+    background-color: white;
+
+    padding: 7px 0px 7px 0px;
+
+    box-sizing: border-box;
+}
+
+.login-with-google-button {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-with-google-button:hover {
+    background-color: #F5F8F6;
+    transition-duration: 150ms;
+}
+
+.login-with-google-button:focus-visible {
+    outline: 3px solid #0F766E;
+    outline-offset: 2px;
+
+    transition-duration: 80ms;
+}
+
+.login-with-google-button:active {
+    color: black;
+    background-color: #E3ECE7;
+    border: 2px solid #7C968A;
+}
+
+.login-option-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 500;
+
+    color: grey;
+}
+
+.login-option-title::before,
+.login-option-title::after {
+    content: "";
+
+    flex: 1;
+    height: 1px;
+
+    background-color: #DCE6E1;
+}
+
+.login-with-google-spinner,
+.login-with-email-spinner {
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+
+    border: 3px solid #B9C9C1;
+    border-top: 3px solid #0F766E;
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.login-with-email-email-title,
+.login-with-email-password-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 700;
+
+    margin: 0px 0px 5px 0px;
+}
+
+.login-with-email-email-input,
+.login-with-email-password-input {
+    padding: 7px;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.login-with-email-email-input:hover,
+.login-with-email-password-input:hover {
+    border: 2px solid #7C968A;
+}
+
+.login-with-email-email-input:focus {
+    border: 2px solid #0F766E;
+}
+
+.login-with-email-password-input:focus {
+    outline: none;
+    border-color: #0F766E;
+    box-shadow: 0 0 0 3px rgb(15, 118, 110, 0.3);
+}
+
+.login-with-email-password-title {
+    margin-top: 10px;
+}
+
+.login-with-email-password-input-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.login-with-email-password-icons {
+    position: absolute;
+    right: 10px;
+
+    background-color: white;
+    border: none;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.login-with-email-password-hint {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(8px, 2vw, 10px);
+
+    color: #DC2626;
+}
+
+.login-with-email-password-hint.valid {
+    color: #16A34A;
+}
+
+.login-with-email-forget-password {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(10px, 2vw, 12px);
+    font-weight: 700;
+
+    color: #0F766E;
+    background-color: transparent;
+
+    margin: 5px 0px 0px auto;
+
+    border: none;
+    cursor: pointer;
+}
+
+.login-with-email-forget-password:hover {
+    color: #0B5C56;
+    transition-duration: 150ms;
+}
+
+.login-with-email-forget-password:focus-visible,
+.login-page-register-button:focus-visible {
+    border: 3px solid #0F766E;
+    border-radius: 4px;
+
+    outline: none;
+    outline-offset: 3px;
+
+    transition-duration: 80ms;
+}
+
+.login-with-email-forget-password:active {
+    color: #084B46
+}
+
+.login-with-email-login-button {
+    color: white;
+    background-color: #0F766E;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+}
+
+.login-with-email-login-button:hover {
+    background-color: #0B5C56;
+    transition-duration: 150ms;
+}
+
+.login-with-email-login-button:focus-visible {
+    outline: 3px solid #0F766E;
+    outline-offset: 2px;
+
+    transition-duration: 80ms;
+}
+
+.login-with-email-login-button:active {
+    background-color: #084B46;
+
+    transform: scale(0.98);
+    transition: 200ms;
+}
+
+.login-with-email-login-button.loading {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 700;
+
+    color: #0B5C56;
+    background-color: #CFE5DF;
+}
+
+.login-page-register-title {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(10px, 2vw, 12px);
+    font-weight: 700;
+}
+
+.login-page-register-button {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(10px, 2vw, 12px);
+    font-weight: 700;
+
+    color: #0F766E;
+    background-color: white;
+
+    border: none;
+
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-page-register-button:hover {
+    color: #0B5C56;
+    transition-duration: 150ms;
+}
+
+.login-page-divider {
+    width: 100%;
+    height: 1px;
+
+    border: none;
+    padding: 0;
+
+    background-color: #DCE6E1;
+    margin: 0;
+}
+
+.login-page-no-login {
+    display: flex;
+    justify-content: center;
+}
+
+.login-page-no-login-button {
+    font-family: 'Kanit', sans-serif;
+    font-size: clamp(10px, 2vw, 12px);
+
+    background-color: transparent;
+
+    border: none;
+
+    cursor: pointer;
+}
